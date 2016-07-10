@@ -74,7 +74,7 @@ function designQuoteAPIcall() {
    $('.title').html("Design Quote")
    $.ajax({
       type: "GET",
-      url: "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1",
+      url: "http://cors.io/?u=https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1",
       dataType: "json",
       success: function (data) {
          $('.quote div:first-child em').html('"' + data[0].content.replace(/<[\/]*p>/gi, '') + '"')
